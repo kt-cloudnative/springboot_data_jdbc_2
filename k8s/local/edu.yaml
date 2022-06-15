@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: edu10-svc
+  namespace: edu-app
+spec:
+  selector:
+    app: edu10
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: http
+  #   nodePort: 32180
+  # type: NodePort
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edu10-deploy
+  namespace: edu-app
+  labels:
+    app: edu10
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: edu10
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
+      labels:
+        app: edu10
+    spec:
+      containers:
+        - name: edu10
+          image: nexus.dspace.kt.co.kr/argocd/edu10
+          ports:
+            - name: http
+              containerPort: 8080

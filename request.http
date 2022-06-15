@@ -1,0 +1,355 @@
+### service health
+GET http://localhost:8088/ppon/system/healthz
+
+### ppon/cont/retvByPage
+POST http://localhost:8088/ppon/cont/retvByPage
+Content-Type: application/json
+{
+    "service_request": {
+        "pponContPayload" : {
+            "pageSize" : 5,
+            "pageNo" : 1
+        },
+        "saSecurity": {
+            "payloadNames": "pponContPayload"
+        },
+        "commonHeader": {
+            "responseTitle": "",
+            "responseLogcd": "",
+            "langCode": "",
+            "trTime": 174535896,
+            "lockType": "",
+            "cmpnCd": "KT",
+            "orgId": "SPT8050",
+            "responseCode": "",
+            "lgDateTime": 20220307174535,
+            "resendFlag": "",
+            "trFlag": "T",
+            "lockTimeSt": "",
+            "responseType": "",
+            "trDate": 20220307,
+            "chnlType": "UI",
+            "srcId": "DNIUI2001LY",
+            "curHostId": "",
+            "responseDtal": "",
+            "responseSystem": "",
+            "phase": "",
+            "clntIp": "172.25.96.1",
+            "tokenId": "",
+            "arbitraryKey": "{}",
+            "appName": "NBSS_CST",
+            "svcName": "/ppon/cont/retvByPage",
+            "userId": 82023154,
+            "responseBasc": "",
+            "lockId": "",
+            "fnName": "service",
+            "globalNo": "00000820231542022030717453589686",
+            "realUserId": 82023154,
+            "envrFlag": "",
+            "filler": "E",
+            "businessKey": "00008202315400A_MASTER20220307174533241",
+            "fnCd": ""
+        },
+        "bizHeader": {
+            "orderId": "orderId",
+            "cbSvcName": "/ppon/cont/retvByPage",
+            "cbFnName": "service"
+        }
+    }
+}
+
+### ppon/cont/retvBySrhwd
+POST http://localhost:8088/ppon/cont/retvBySrhwd
+Content-Type: application/json
+{
+    "service_request": {
+        "pponContPayload" : {
+            "srhwd" : "호1"
+        },
+        "saSecurity": {
+            "payloadNames": "pponContPayload"
+        },
+        "commonHeader": {
+            "responseTitle": "",
+            "responseLogcd": "",
+            "langCode": "",
+            "trTime": 174535896,
+            "lockType": "",
+            "cmpnCd": "KT",
+            "orgId": "SPT8050",
+            "responseCode": "",
+            "lgDateTime": 20220307174535,
+            "resendFlag": "",
+            "trFlag": "T",
+            "lockTimeSt": "",
+            "responseType": "",
+            "trDate": 20220307,
+            "chnlType": "UI",
+            "srcId": "DNIUI2001LY",
+            "curHostId": "",
+            "responseDtal": "",
+            "responseSystem": "",
+            "phase": "",
+            "clntIp": "172.25.96.1",
+            "tokenId": "",
+            "arbitraryKey": "{}",
+            "appName": "NBSS_CST",
+            "svcName": "/ppon/cont/retvBySrhwd",
+            "userId": 82023154,
+            "responseBasc": "",
+            "lockId": "",
+            "fnName": "service",
+            "globalNo": "00000820231542022030717453589686",
+            "realUserId": 82023154,
+            "envrFlag": "",
+            "filler": "E",
+            "businessKey": "00008202315400A_MASTER20220307174533241",
+            "fnCd": ""
+        },
+        "bizHeader": {
+            "orderId": "orderId",
+            "cbSvcName": "/ppon/cont/retvBySrhwd",
+            "cbFnName": "service"
+        }
+    }
+}
+
+### ppon/cont/retvById
+POST http://localhost:8088/cqrs-query-ppon/cont/retvByIdFeign
+Content-Type: application/json
+{
+    "service_request": {
+        "intelnetContPayload" : {
+            "saIntelnetContNo" : 3
+        },
+        "saSecurity": {
+            "payloadNames": "intelnetContPayload"
+        },
+        "commonHeader": {
+            "responseTitle": "",
+            "responseLogcd": "",
+            "langCode": "",
+            "trTime": 174535896,
+            "lockType": "",
+            "cmpnCd": "KT",
+            "orgId": "SPT8050",
+            "responseCode": "",
+            "lgDateTime": 20220307174535,
+            "resendFlag": "",
+            "trFlag": "T",
+            "lockTimeSt": "",
+            "responseType": "",
+            "trDate": 20220307,
+            "chnlType": "UI",
+            "srcId": "DNIUI2001LY",
+            "curHostId": "",
+            "responseDtal": "",
+            "responseSystem": "",
+            "phase": "",
+            "clntIp": "172.25.96.1",
+            "tokenId": "",
+            "arbitraryKey": "{}",
+            "appName": "NBSS_CST",
+            "svcName": "/ppon/cont/retvById",
+            "userId": 82023154,
+            "responseBasc": "",
+            "lockId": "",
+            "fnName": "service",
+            "globalNo": "00000820231542022030717453589686",
+            "realUserId": 82023154,
+            "envrFlag": "",
+            "filler": "E",
+            "businessKey": "00008202315400A_MASTER20220307174533241",
+            "fnCd": ""
+        },
+        "bizHeader": {
+            "orderId": "orderId",
+            "cbSvcName": "/ppon/cont/retvById",
+            "cbFnName": "service"
+        }
+    }
+}
+
+
+### ppon/cont/reg
+POST http://localhost:8078/cqrs-command-ppon/cont/reg
+Content-Type: application/json
+{
+    "service_request": {
+        "pponContPayload" : {
+            "contr": "계약자-등록1",
+            "payr": "납입자-등록1",
+            "svcNo": "서비스번호-등록1",
+            "cardNo": "카드번호-등록1",
+            "mkerId": "user1q",
+            "mkerNm": "사용자1q",
+            "mkeDate": "20220524120453125"
+        },
+        "saSecurity": {
+            "payloadNames": "pponContPayload"
+        },
+        "commonHeader": {
+            "responseTitle": "",
+            "responseLogcd": "",
+            "langCode": "",
+            "trTime": 174535896,
+            "lockType": "",
+            "cmpnCd": "KT",
+            "orgId": "SPT8050",
+            "responseCode": "",
+            "lgDateTime": 20220307174535,
+            "resendFlag": "",
+            "trFlag": "T",
+            "lockTimeSt": "",
+            "responseType": "",
+            "trDate": 20220307,
+            "chnlType": "UI",
+            "srcId": "DNIUI2001LY",
+            "curHostId": "",
+            "responseDtal": "",
+            "responseSystem": "",
+            "phase": "",
+            "clntIp": "172.25.96.1",
+            "tokenId": "",
+            "arbitraryKey": "{}",
+            "appName": "NBSS_CST",
+            "svcName": "/ppon/cont/reg",
+            "userId": 82023154,
+            "responseBasc": "",
+            "lockId": "",
+            "fnName": "service",
+            "globalNo": "00000820231542022030717453589686",
+            "realUserId": 82023154,
+            "envrFlag": "",
+            "filler": "E",
+            "businessKey": "00008202315400A_MASTER20220307174533241",
+            "fnCd": ""
+        },
+        "bizHeader": {
+            "orderId": "orderId",
+            "cbSvcName": "/ppon/cont/reg",
+            "cbFnName": "service"
+        }
+    }
+}
+
+
+### ppon/cont/amd
+POST http://localhost:8078/cqrs-command-ppon/cont/amd
+Content-Type: application/json
+{
+    "service_request": {
+        "pponContPayload" : {
+            "saPponContNo": 2,
+            "contr": "계약자91-수정",
+            "payr": "납입자91-수정",
+            "svcNo": "서비스번호91-수정",
+            "cardNo": "카드번호91-수정",
+            "amdrId": "user1",
+            "amdrNm": "사용자1",
+            "amdDate": "20220524120453125"
+        },
+        "saSecurity": {
+            "payloadNames": "pponContPayload"
+        },
+        "commonHeader": {
+            "responseTitle": "",
+            "responseLogcd": "",
+            "langCode": "",
+            "trTime": 174535896,
+            "lockType": "",
+            "cmpnCd": "KT",
+            "orgId": "SPT8050",
+            "responseCode": "",
+            "lgDateTime": 20220307174535,
+            "resendFlag": "",
+            "trFlag": "T",
+            "lockTimeSt": "",
+            "responseType": "",
+            "trDate": 20220307,
+            "chnlType": "UI",
+            "srcId": "DNIUI2001LY",
+            "curHostId": "",
+            "responseDtal": "",
+            "responseSystem": "",
+            "phase": "",
+            "clntIp": "172.25.96.1",
+            "tokenId": "",
+            "arbitraryKey": "{}",
+            "appName": "NBSS_CST",
+            "svcName": "/ppon/cont/amd",
+            "userId": 82023154,
+            "responseBasc": "",
+            "lockId": "",
+            "fnName": "service",
+            "globalNo": "00000820231542022030717453589686",
+            "realUserId": 82023154,
+            "envrFlag": "",
+            "filler": "E",
+            "businessKey": "00008202315400A_MASTER20220307174533241",
+            "fnCd": ""
+        },
+        "bizHeader": {
+            "orderId": "orderId",
+            "cbSvcName": "/ppon/cont/amd",
+            "cbFnName": "service"
+        }
+    }
+}
+
+
+### ppon/cont/del
+POST http://localhost:8088/ppon/cont/del
+Content-Type: application/json
+{
+    "service_request": {
+        "pponContPayload" : {
+            "saPponContNo" : 13
+        },
+        "saSecurity": {
+            "payloadNames": "pponContPayload"
+        },
+        "commonHeader": {
+            "responseTitle": "",
+            "responseLogcd": "",
+            "langCode": "",
+            "trTime": 174535896,
+            "lockType": "",
+            "cmpnCd": "KT",
+            "orgId": "SPT8050",
+            "responseCode": "",
+           "lgDateTime": 20220307174535,
+            "resendFlag": "",
+            "trFlag": "T",
+            "lockTimeSt": "",
+            "responseType": "",
+            "trDate": 20220307,
+            "chnlType": "UI",
+            "srcId": "DNIUI2001LY",
+            "curHostId": "",
+            "responseDtal": "",
+            "responseSystem": "",
+            "phase": "",
+            "clntIp": "172.25.96.1",
+            "tokenId": "",
+            "arbitraryKey": "{}",
+            "appName": "NBSS_CST",
+           "svcName": "/ppon/cont/del",
+            "userId": 82023154,
+            "responseBasc": "",
+            "lockId": "",
+            "fnName": "service",
+            "globalNo": "00000820231542022030717453589686",
+            "realUserId": 82023154,
+            "envrFlag": "",
+            "filler": "E",
+            "businessKey": "00008202315400A_MASTER20220307174533241",
+            "fnCd": ""
+        },
+        "bizHeader": {
+            "orderId": "orderId",
+            "cbSvcName": "/ppon/cont/del",
+            "cbFnName": "service"
+        }
+    }
+}

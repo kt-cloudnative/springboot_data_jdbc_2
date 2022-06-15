@@ -1,0 +1,48 @@
+erver:
+  tomcat:
+    url-encoding: UTF-8
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: edu-spring-data-jdbc
+  profiles:
+    active: local
+  banner:
+    location: "classpath:banner.txt"
+# cache 사용을 위해 cache name 설정
+  cache:
+    cache-names: articles
+
+# logging
+logging:
+  config: classpath:log4j2.xml
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: always
+
+
+# app
+app-info:
+  app-name: "edu-spring-data-jdbc"
+  title: "Caravan Edu API"
+  build:
+    version: '@project.version@'
+    timestamp: '@app.build.timestamp@'
+  user-id: "jakelee"
+  org-id: "my-home"
+  desc: "EDU 관련 설명입니다."
+  doc-url: "https://github.com/shclub/edu/"
+  license: "Apache License"
+  license_url: "https://github.com/shclub/edu/"
+  version: "@app.build.timestamp@"
+  doc-desc: "기타정보"
+

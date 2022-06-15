@@ -1,0 +1,28 @@
+edu11-1 14:12:34.904 INFO  com.kt.edu.thirdproject.ThirdprojectApplication : - Starting ThirdprojectApplication using Java 17.0.2 on jake-MacBookAir.local with PID 49829 (/Users/jakelee/Downloads/edu11-1/target/classes started by jakelee in /Users/jakelee/Downloads/edu11-1) 
+edu11-1 14:12:34.908 DEBUG com.kt.edu.thirdproject.ThirdprojectApplication : - Running with Spring Boot v2.6.3, Spring v5.3.15 
+edu11-1 14:12:34.908 INFO  com.kt.edu.thirdproject.ThirdprojectApplication : - The following profiles are active: local 
+edu11-1 14:12:34.930 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+edu11-1 14:12:34.930 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+edu11-1 14:12:35.242 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : - Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+edu11-1 14:12:35.259 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : - Finished Spring Data repository scanning in 15 ms. Found 2 JDBC repository interfaces. 
+edu11-1 14:12:35.447 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : - Tomcat initialized with port(s): 8080 (http) 
+edu11-1 14:12:35.453 INFO  org.apache.coyote.http11.Http11NioProtocol : - Initializing ProtocolHandler ["http-nio-8080"] 
+edu11-1 14:12:35.453 INFO  org.apache.catalina.core.StandardService : - Starting service [Tomcat] 
+edu11-1 14:12:35.454 INFO  org.apache.catalina.core.StandardEngine : - Starting Servlet engine: [Apache Tomcat/9.0.56] 
+edu11-1 14:12:35.477 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : - Initializing Spring embedded WebApplicationContext 
+edu11-1 14:12:35.477 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : - Root WebApplicationContext: initialization completed in 546 ms 
+edu11-1 14:12:35.493 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Starting... 
+edu11-1 14:12:35.532 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Start completed. 
+edu11-1 14:12:35.536 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration : - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb' 
+edu11-1 14:12:35.572 INFO  jdbc.sqltiming : - create sequence hibernate_sequence\n {executed in 1 msec} 
+edu11-1 14:12:35.574 INFO  jdbc.sqltiming : - create table article ( id long not null, title varchar(255), content varchar(255) )\n {executed in 1 msec} 
+edu11-1 14:12:35.574 INFO  jdbc.sqltiming : - alter table article add constraint article_pk primary key (id)\n {executed in 0 msec} 
+edu11-1 14:12:35.576 INFO  jdbc.sqltiming : - INSERT INTO article(id, title, content) VALUES(1, '1', '테스트 1')\n {executed in 1 msec} 
+edu11-1 14:12:35.576 INFO  jdbc.sqltiming : - INSERT INTO article(id, title, content) VALUES(2, '2', '테스트2')\n {executed in 0 msec} 
+edu11-1 14:12:35.577 INFO  jdbc.sqltiming : - INSERT INTO article(id, title, content) VALUES(3, '3', '테스트 3')\n {executed in 0 msec} 
+edu11-1 14:12:35.637 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : - LiveReload server is running on port 35729 
+edu11-1 14:12:36.003 INFO  org.apache.coyote.http11.Http11NioProtocol : - Starting ProtocolHandler ["http-nio-8080"] 
+edu11-1 14:12:36.009 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : - Tomcat started on port(s): 8080 (http) with context path '' 
+edu11-1 14:12:36.014 INFO  com.kt.edu.thirdproject.ThirdprojectApplication : - Started ThirdprojectApplication in 1.284 seconds (JVM running for 2.251) 
+edu11-1 14:12:41.485 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Shutdown initiated... 
+edu11-1 14:12:41.486 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Shutdown completed. 
