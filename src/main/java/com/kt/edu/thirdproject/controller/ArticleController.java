@@ -38,18 +38,31 @@ public class ArticleController {
     @PostMapping("/create")
     @Operation(summary ="게시물 등록",description="게시물을 등록합니다.")
     public ResponseEntity<ArticleEntity> create(@RequestBody ArticleEntity articleEntity) {
-        return this.articleCommandService.create(articleEntity);
+        ArticleEntity createdEntity = articleCommandService.create(articleEntity);
+        return ResponseEntity.ok(createdEntity);
     }
+    /*public ResponseEntity<ArticleEntity> create(@RequestBody ArticleEntity articleEntity) {
+        return this.articleCommandService.create(articleEntity);
+    }*/
 
     @PostMapping("/update")
     @Operation(summary ="게시물 수정",description="게시물을 수정합니다.")
     public ResponseEntity<ArticleEntity> update(@RequestBody ArticleEntity articleEntity) {
-        return this.articleCommandService.update(articleEntity);
+        ArticleEntity updatedEntity = articleCommandService.update(articleEntity);
+        return ResponseEntity.ok(updatedEntity);
     }
+    /*public ResponseEntity<ArticleEntity> update(@RequestBody ArticleEntity articleEntity) {
+        return this.articleCommandService.update(articleEntity);
+    }*/
 
     @DeleteMapping("/delete/{id}")
     @Operation(summary ="게시물 삭제",description="게시물을 삭제합니다.")
     public ResponseEntity<ArticleEntity> delete(@PathVariable Long id) {
-        return this.articleCommandService.delete(id);
+        ArticleEntity deletedEntity = articleCommandService.delete(id);
+        return ResponseEntity.ok(deletedEntity);
     }
+    /*
+    public ResponseEntity<ArticleEntity> delete(@PathVariable Long id) {
+        return this.articleCommandService.delete(id);
+    }*/
 }

@@ -20,26 +20,45 @@ public class ArticleCommandService {
     @Autowired
     private ArticleCommandRepository articleCommandRepository;
 
-    public ResponseEntity<ArticleEntity> create(ArticleEntity articleEntity) {
+    /*public ResponseEntity<ArticleEntity> create(ArticleEntity articleEntity) {
         log.info("Request to create ArticleEntity : " +  articleEntity);
         articleEntity.setId(articleCommandRepository.retvNextVal());
         articleEntity.setNew(true);
         ArticleEntity createdEntity = articleCommandRepository.save(articleEntity);
         return ResponseEntity.ok(createdEntity);
+    }*/
+    public ArticleEntity create(ArticleEntity articleEntity) {
+        log.info("Request to create ArticleEntity : " +  articleEntity);
+        articleEntity.setId(articleCommandRepository.retvNextVal());
+        articleEntity.setNew(true);
+        ArticleEntity createdEntity = articleCommandRepository.save(articleEntity);
+        return createdEntity;
     }
 
-    public ResponseEntity<ArticleEntity> update(ArticleEntity articleEntity) {
+    /*public ResponseEntity<ArticleEntity> update(ArticleEntity articleEntity) {
         log.info("Request to update ArticleEntity : " +  articleEntity);
         articleEntity.setNew(false);
         ArticleEntity updatedEntity = articleCommandRepository.save(articleEntity);
         return ResponseEntity.ok(updatedEntity);
+    }*/
+    public ArticleEntity update(ArticleEntity articleEntity) {
+        log.info("Request to update ArticleEntity : " +  articleEntity);
+        articleEntity.setNew(false);
+        ArticleEntity updatedEntity = articleCommandRepository.save(articleEntity);
+        return updatedEntity;
     }
-
-    public ResponseEntity<ArticleEntity> delete(Long id) {
+    /*public ResponseEntity<ArticleEntity> delete(Long id) {
         log.info("Request to delete ArticleEntity id : " +  id);
         ArticleEntity articleEntity = articleCommandRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Request not exist with id" +id));
         articleCommandRepository.delete(articleEntity);
         return ResponseEntity.ok(articleEntity);
+    }*/
+    public ArticleEntity delete(Long id) {
+        log.info("Request to delete ArticleEntity id : " +  id);
+        ArticleEntity articleEntity = articleCommandRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Request not exist with id" +id));
+        articleCommandRepository.delete(articleEntity);
+        return  articleEntity;
     }
 }
