@@ -7,7 +7,7 @@ COPY pom.xml ./
 COPY src ./src
 
 COPY . ./
-RUN ./mvnw clean package -Dmaven.test.skip=true
+RUN chmod 777 ./mvnw clean package -Dmaven.test.skip=true
 
 COPY /build/target/*.jar app.jar
 
