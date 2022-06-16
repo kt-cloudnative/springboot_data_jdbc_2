@@ -3,11 +3,19 @@ FROM eclipse-temurin:17.0.2_8-jre-alpine
 RUN mkdir -p build
 WORKDIR /build
 
-COPY pom.xml ./
-COPY src ./src
 
+COPY pom.xml ./
+COPY src ./src                             
+COPY mvnw ./         
 COPY . ./
-RUN chmod 777 ./mvnw clean package -Dmaven.test.skip=true
+#RUN chmod 777 ./mvnw clean package -Dmaven.test.skip=true
+
+#COPY .mvn .mvn                                               
+#COPY mvnw .                                                  
+#COPY pom.xml .                                               
+#COPY src src                                                 
+
+RUN ./mvnw -B package
 
 COPY /build/target/*.jar app.jar
 
@@ -21,3 +29,4 @@ ENV JAVA_OPTS="${JAVA_OPTS} -XX:+UseG1GC -XX:+UnlockDiagnosticVMOptions -XX:+G1S
 
 #ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar  app.jar "]
 ENTRYPOINT ["sh", "-c", "java -jar  app.jar "]
+
