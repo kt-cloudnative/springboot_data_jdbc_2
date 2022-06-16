@@ -16,7 +16,9 @@ COPY . ./
 #COPY pom.xml .                                               
 #COPY src src                                                 
 
-RUN /mvnw clean package -Dmaven.test.skip=true
+RUN ./mvnw clean package -Dmaven.test.skip=true
+
+FROM eclipse-temurin:17.0.2_8-jre-alpine
 
 COPY --from=MAVEN_BUILD /build/target/*.jar app.jar
 
