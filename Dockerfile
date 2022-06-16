@@ -1,4 +1,5 @@
-FROM  maven:3.8.4-openjdk-17 AS MAVEN_BUILD
+#FROM  maven:3.8.4-openjdk-17 AS MAVEN_BUILD
+FROM openjdk:17-alpine AS MAVEN_BUILD
 
 RUN mkdir -p build
 WORKDIR /build
@@ -15,9 +16,7 @@ COPY . ./
 #COPY pom.xml .                                               
 #COPY src src                                                 
 
-RUN mvn clean package 
-
-#-Dmaven.test.skip=true
+RUN ./mvnw clean package -Dmaven.test.skip=true
 
 FROM eclipse-temurin:17.0.2_8-jre-alpine
 
