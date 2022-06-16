@@ -1,0 +1,13 @@
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/ThirdprojectApplication.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/domain/Article.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/config/OpenApiConfig.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/service/ArticleService.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/repository/sql/QueryArticleContSqls.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/config/CacheConfig.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/service/ArticleCommandService.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/repository/ArticleRepository.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/repository/ArticleCommandRepository.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/config/CacheType.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/controller/ArticleController.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/domain/ArticleEntity.java
+/Users/jakelee/Downloads/edu11-1/src/main/java/com/kt/edu/thirdproject/exception/ResourceNotFoundException.java
