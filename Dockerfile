@@ -1,4 +1,4 @@
-FROM  maven:3.8.4-openjdk-17 AS MAVEN_BUILD
+FROM eclipse-temurin:17.0.2_8-jre-alpine
 
 RUN mkdir -p build
 WORKDIR /build
@@ -7,12 +7,9 @@ COPY pom.xml ./
 COPY src ./src
 
 COPY . ./
-RUN mvn package
+RUN ./mvnw clean package -Dmaven.test.skip=true
 
-
-FROM eclipse-temurin:17.0.2_8-jre-alpine
-
-COPY --from=MAVEN_BUILD /build/target/*.jar app.jar
+COPY /build/target/*.jar app.jar
 
 ENV TZ Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
