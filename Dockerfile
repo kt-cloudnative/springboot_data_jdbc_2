@@ -16,11 +16,9 @@ COPY . ./
 #COPY pom.xml .                                               
 #COPY src src                                                 
 
-RUN ./mvnw -B package
+RUN /mvnw clean package -Dmaven.test.skip=true
 
 COPY --from=MAVEN_BUILD /build/target/*.jar app.jar
-
-COPY /build/target/*.jar app.jar
 
 ENV TZ Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
