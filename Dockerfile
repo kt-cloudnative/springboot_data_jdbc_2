@@ -4,19 +4,14 @@ FROM openjdk:17-alpine AS MAVEN_BUILD
 RUN mkdir -p build
 WORKDIR /build
 
-
 COPY pom.xml ./
 COPY src ./src                             
 COPY mvnw ./         
 COPY . ./
-#RUN chmod 777 ./mvnw clean package -Dmaven.test.skip=true
 
-#COPY .mvn .mvn                                               
-#COPY mvnw .                                                  
-#COPY pom.xml .                                               
-#COPY src src                                                 
-
+#RUN mvn clean package
 RUN ./mvnw clean package -Dmaven.test.skip=true
+#CMD ["./mvnw", "clean", "package"]
 
 FROM eclipse-temurin:17.0.2_8-jre-alpine
 
