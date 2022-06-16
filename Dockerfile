@@ -1,4 +1,5 @@
-FROM eclipse-temurin:17.0.2_8-jre-alpine
+FROM  maven:3.8.4-openjdk-17 AS MAVEN_BUILD
+
 
 RUN mkdir -p build
 WORKDIR /build
@@ -16,6 +17,8 @@ COPY . ./
 #COPY src src                                                 
 
 RUN ./mvnw -B package
+
+COPY --from=MAVEN_BUILD /build/target/*.jar app.jar
 
 COPY /build/target/*.jar app.jar
 
