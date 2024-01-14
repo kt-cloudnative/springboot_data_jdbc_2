@@ -1,2 +1,2 @@
-# edu11-1
+# Springboot Data JDBC
 Spring Data Jdbc ( Full Version )

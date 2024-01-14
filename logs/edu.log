@@ -1,0 +1,29 @@
+edu11-1 19:41:09.762 INFO  com.kt.edu.thirdproject.ThirdprojectApplication : - Starting ThirdprojectApplication using Java 17.0.2 with PID 85300 (/Users/jakelee/springboot_data_jdbc_2/target/classes started by jakelee in /Users/jakelee/springboot_data_jdbc_2) 
+edu11-1 19:41:09.766 DEBUG com.kt.edu.thirdproject.ThirdprojectApplication : - Running with Spring Boot v3.2.1, Spring v6.1.2 
+edu11-1 19:41:09.766 INFO  com.kt.edu.thirdproject.ThirdprojectApplication : - The following 1 profile is active: "local" 
+edu11-1 19:41:09.789 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+edu11-1 19:41:09.790 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+edu11-1 19:41:10.058 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : - Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+edu11-1 19:41:10.080 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate : - Finished Spring Data repository scanning in 20 ms. Found 2 JDBC repository interfaces. 
+edu11-1 19:41:10.277 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : - Tomcat initialized with port 8080 (http) 
+edu11-1 19:41:10.282 INFO  org.apache.coyote.http11.Http11NioProtocol : - Initializing ProtocolHandler ["http-nio-8080"] 
+edu11-1 19:41:10.283 INFO  org.apache.catalina.core.StandardService : - Starting service [Tomcat] 
+edu11-1 19:41:10.283 INFO  org.apache.catalina.core.StandardEngine : - Starting Servlet engine: [Apache Tomcat/10.1.17] 
+edu11-1 19:41:10.302 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : - Initializing Spring embedded WebApplicationContext 
+edu11-1 19:41:10.303 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : - Root WebApplicationContext: initialization completed in 512 ms 
+edu11-1 19:41:10.325 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Starting... 
+edu11-1 19:41:10.365 INFO  com.zaxxer.hikari.pool.HikariPool : - hikari-cp - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7f67d673 
+edu11-1 19:41:10.366 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Start completed. 
+edu11-1 19:41:10.371 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration : - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb' 
+edu11-1 19:41:10.416 INFO  jdbc.sqltiming : - create sequence hibernate_sequence\n {executed in 1 msec} 
+edu11-1 19:41:10.417 INFO  jdbc.sqltiming : - create table article ( id long not null, title varchar(255), content varchar(255) )\n {executed in 1 msec} 
+edu11-1 19:41:10.419 INFO  jdbc.sqltiming : - alter table article add constraint article_pk primary key (id)\n {executed in 1 msec} 
+edu11-1 19:41:10.421 INFO  jdbc.sqltiming : - INSERT INTO article(id, title, content) VALUES(1, '1', '테스트 1')\n {executed in 2 msec} 
+edu11-1 19:41:10.421 INFO  jdbc.sqltiming : - INSERT INTO article(id, title, content) VALUES(2, '2', '테스트2')\n {executed in 0 msec} 
+edu11-1 19:41:10.421 INFO  jdbc.sqltiming : - INSERT INTO article(id, title, content) VALUES(3, '3', '테스트 3')\n {executed in 0 msec} 
+edu11-1 19:41:10.479 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : - LiveReload server is running on port 35729 
+edu11-1 19:41:10.789 INFO  org.apache.coyote.http11.Http11NioProtocol : - Starting ProtocolHandler ["http-nio-8080"] 
+edu11-1 19:41:10.798 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer : - Tomcat started on port 8080 (http) with context path '' 
+edu11-1 19:41:10.803 INFO  com.kt.edu.thirdproject.ThirdprojectApplication : - Started ThirdprojectApplication in 1.192 seconds (process running for 2.054) 
+edu11-1 19:41:13.513 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Shutdown initiated... 
+edu11-1 19:41:13.513 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Shutdown completed. 
